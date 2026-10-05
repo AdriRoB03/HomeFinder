@@ -10,3 +10,12 @@ export async function checkBackend(): Promise<string> {
   return response.text();
 }
 
+export async function getProperties() {
+  const response = await fetch(`${API_URL}/properties`);
+
+  if (!response.ok) {
+    throw new Error("No se pudieron obtener las viviendas");
+  }
+
+  return response.json();
+}
