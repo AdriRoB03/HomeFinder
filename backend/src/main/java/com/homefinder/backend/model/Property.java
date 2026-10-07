@@ -68,4 +68,36 @@ public class Property {
     public String getImage() {
         return image;
     }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public void setBedrooms(int bedrooms) {
+        this.bedrooms = bedrooms;
+    }
+
+    public void setBathrooms(int bathrooms) {
+        this.bathrooms = bathrooms;
+    }
+
+    public void setArea(int area) {
+        this.area = area;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
 }
