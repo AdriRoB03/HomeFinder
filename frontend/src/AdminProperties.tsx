@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import {
-    createProperty,
-    deleteProperty,
-    getProperties,
-    updateProperty,
+  createProperty,
+  deleteProperty,
+  getProperties,
+  updateProperty,
 } from "./services/api";
 
 type Property = {
@@ -53,7 +53,16 @@ function AdminProperties() {
   }
 
   useEffect(() => {
-    loadProperties();
+    async function loadInitialProperties() {
+      try {
+        const data = await getProperties();
+        setProperties(data);
+      } catch (error) {
+        console.error("Error al cargar las viviendas:", error);
+      }
+    }
+
+    loadInitialProperties();
   }, []);
 
   function handleChange(
